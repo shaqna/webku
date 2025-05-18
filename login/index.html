@@ -75,19 +75,13 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
         <script>
-		document.getElementById('loginForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-			const benar =
-				this.username.value.trim() === 'namaku siapa' &&
-				this.pass.value === '1234';
-
-			if (benar) {
-				 window.location.href = '../index.html';
-			} else {
-				 alert('Username atau password salah');
-			}
-			});
-	</script>
-			
+		document.addEventListener('DOMContentLoaded', function () {
+			const form = document.getElementById('loginForm');
+			form.addEventListener('submit', function (e) {
+				e.preventDefault();
+				window.location.href = '../index.html';
+			 });
+	});
+	</script>			
 </body>
 </html>
